@@ -1,4 +1,4 @@
-//go:build lambdacomponents.custom && (lambdacomponents.all || lambdacomponents.exporter.all || lambdacomponents.exporter.prometheusremotewrite)
+//go:build lambdacomponents.custom && (lambdacomponents.all || lambdacomponents.processor.all || lambdacomponents.processor.filter)
 
 // Copyright The OpenTelemetry Authors
 //
@@ -14,15 +14,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package exporter
+package processor
 
 import (
-	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter"
-	"go.opentelemetry.io/collector/exporter"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor"
+	"go.opentelemetry.io/collector/processor"
 )
 
 func init() {
-	Factories = append(Factories, func(extensionId string) exporter.Factory {
-		return prometheusremotewriteexporter.NewFactory()
+	Factories = append(Factories, func(extensionId string) processor.Factory {
+		return transformprocessor.NewFactory()
 	})
 }
