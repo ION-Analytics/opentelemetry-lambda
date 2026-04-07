@@ -18,7 +18,6 @@ package lambdacomponents
 
 import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awskinesisexporter"
-	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor"
@@ -26,6 +25,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor"
 	"github.com/open-telemetry/opentelemetry-lambda/collector/processor/decoupleprocessor"
 	"go.opentelemetry.io/collector/exporter/debugexporter"
 	"go.opentelemetry.io/collector/exporter/otlpexporter"
@@ -57,7 +57,6 @@ func Components(extensionID string) (otelcol.Factories, error) {
 		debugexporter.NewFactory(),
 		otlpexporter.NewFactory(),
 		otlphttpexporter.NewFactory(),
-		prometheusremotewriteexporter.NewFactory(),
 		awskinesisexporter.NewFactory(),
 	)
 	if err != nil {
@@ -69,6 +68,7 @@ func Components(extensionID string) (otelcol.Factories, error) {
 		filterprocessor.NewFactory(),
 		memorylimiterprocessor.NewFactory(),
 		probabilisticsamplerprocessor.NewFactory(),
+		transformprocessor.NewFactory(),
 		resourceprocessor.NewFactory(),
 		spanprocessor.NewFactory(),
 		coldstartprocessor.NewFactory(),
