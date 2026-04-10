@@ -3,32 +3,32 @@ module github.com/open-telemetry/opentelemetry-lambda/collector/lambdacomponents
 go 1.26.1
 
 require (
-	github.com/open-telemetry/opentelemetry-collector-contrib/connector/spanmetricsconnector v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusremotewriteexporter v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.147.0
-	github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor v0.147.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/connector/spanmetricsconnector v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awskinesisexporter v0.148.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/extension/basicauthextension v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/extension/sigv4authextension v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.149.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor v0.149.0
 	github.com/open-telemetry/opentelemetry-lambda/collector/processor/coldstartprocessor v0.98.0
 	github.com/open-telemetry/opentelemetry-lambda/collector/processor/decoupleprocessor v0.0.0-00010101000000-000000000000
 	github.com/open-telemetry/opentelemetry-lambda/collector/receiver/telemetryapireceiver v0.98.0
-	go.opentelemetry.io/collector/component v1.53.0
-	go.opentelemetry.io/collector/connector v0.147.0
-	go.opentelemetry.io/collector/exporter v1.53.0
-	go.opentelemetry.io/collector/exporter/debugexporter v0.147.0
-	go.opentelemetry.io/collector/exporter/otlpexporter v0.147.0
-	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.147.0
-	go.opentelemetry.io/collector/extension v1.53.0
-	go.opentelemetry.io/collector/otelcol v0.147.0
-	go.opentelemetry.io/collector/processor v1.53.0
-	go.opentelemetry.io/collector/processor/batchprocessor v0.147.0
-	go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.147.0
-	go.opentelemetry.io/collector/receiver v1.53.0
-	go.opentelemetry.io/collector/receiver/otlpreceiver v0.147.0
-	go.opentelemetry.io/collector/service v0.147.0
+	go.opentelemetry.io/collector/component v1.55.0
+	go.opentelemetry.io/collector/connector v0.149.0
+	go.opentelemetry.io/collector/exporter v1.55.0
+	go.opentelemetry.io/collector/exporter/debugexporter v0.149.0
+	go.opentelemetry.io/collector/exporter/otlpexporter v0.149.0
+	go.opentelemetry.io/collector/exporter/otlphttpexporter v0.149.0
+	go.opentelemetry.io/collector/extension v1.55.0
+	go.opentelemetry.io/collector/otelcol v0.149.0
+	go.opentelemetry.io/collector/processor v1.55.0
+	go.opentelemetry.io/collector/processor/batchprocessor v0.149.0
+	go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.149.0
+	go.opentelemetry.io/collector/receiver v1.55.0
+	go.opentelemetry.io/collector/receiver/otlpreceiver v0.149.0
+	go.opentelemetry.io/collector/service v0.149.0
 	go.uber.org/multierr v1.11.0
 )
 
